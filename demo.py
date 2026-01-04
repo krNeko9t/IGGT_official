@@ -11,6 +11,17 @@ Features:
 - Feature extraction and clustering
 - 3D scene visualization export (GLB format)
 """
+import sklearn
+
+import sys
+import torchvision
+# 把新版 torchvision 的 functional 模块伪装成老版的 functional_tensor
+try:
+    from torchvision.transforms import functional_tensor
+except ImportError:
+    from torchvision.transforms import functional as F
+    sys.modules["torchvision.transforms.functional_tensor"] = F
+
 
 import os
 import cv2
@@ -662,7 +673,7 @@ def main():
     start_time = time.time()
 
     # Configuration
-    MODEL_PATH = "model path"
+    MODEL_PATH = "/home/bingxing2/ailab/liuyifei/lyj/IGGT_official/iggt_checkpoint.pth"
 
     # Input/Output paths
     TARGET_DIR = "./iggt_demo/demo9"

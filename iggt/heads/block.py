@@ -35,7 +35,8 @@ except ImportError:
     XFORMERS_AVAILABLE = False
 
 try:
-    from apex.normalization import FusedRMSNorm as RMSNorm
+    # from apex.normalization import FusedRMSNorm as RMSNorm
+    from xformers.ops import RMSNorm
 except:
     from src.model.norm import RMSNorm
 

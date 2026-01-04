@@ -1,6 +1,7 @@
 # --------------------------------------------------------
 # utilitary functions for DUSt3R
 # --------------------------------------------------------
+from sklearn.neighbors import NearestNeighbors
 import torch
 import cv2
 import numpy as np
@@ -9,10 +10,9 @@ from PIL import Image
 import matplotlib.cm as cm
 from jaxtyping import Float
 from torch import Tensor
-from sklearn.cluster import MiniBatchKMeans, DBSCAN
+# from sklearn.cluster import MiniBatchKMeans, DBSCAN
 from typing import Union, Tuple
 import matplotlib.pyplot as plt
-from sklearn.neighbors import NearestNeighbors
 from torch_geometric.nn import knn_graph
 from torch_scatter import scatter_mean
 

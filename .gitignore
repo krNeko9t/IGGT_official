@@ -163,3 +163,9 @@ results/
 
 
 output/
+*/demo*/colored_pca
+*/demo*/colored_pca_3d
+*/demo*/pred_depths
+*/demo*/dbscan_masks
+*/demo*/predictions.npz
+*.pth
